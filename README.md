@@ -36,31 +36,18 @@ As of 10/12/2025, it contains two projects, each in a different repository branc
 
 ### Manual Mode
 
-- The user interacts with the board via UART2 commands.  
-- The board waits for sensor data lines on UART1 and prints them directly or interprets commands.  
-- Users can query sensor values or configure parameters on demand.  
-- Sensor data is **not automatically averaged or buffered** in this mode.
+- The user can interact with the board via UART2 commands.  
+- The board waits for sensor data lines on UART1 and processes them.  
+- Users can send commands according to the table down below, to configure the board operation parameters.
 
 ### Automatic Mode (Default)
 
 - The board autonomously manages data acquisition and transmission cycles.  
-- The microcontroller wakes periodically, setting the sensor to **Mode 2** (refer to sensor documentation).  
-- It acquires *n* CO2 samples (default 10), averages them, and stores the averages in an internal buffer.  
-- Once the buffer fills (default size 5 averages), it transmits the data via LoRaWAN (or UART if selected).  
+- The microcontroller wakes periodically, setting the sensor to **Mode 2** (refer to sensor documentation or to the wiki page).  
+- It acquires *n* CO2 samples (default 10), averages them, and stores the averages in a buffer.  
+- Once the buffer fills (default size 5 averages, 2 bytes each), it transmits the data via LoRaWAN (or UART if selected).  
 - During sleep phases, the microcontroller enters **Stop2 mode** and the sensor into **Mode 0 (sleep)** while keeping power supplied for accuracy.  
 - Sleep duration (*Ts*) is configurable by the user; default is 30 seconds.
-
----
-
-## Key Features
-
-- UART interrupt-driven reception from both CO2 sensor (UART1) and PC terminal (UART2).  
-- Buffering and averaging configurable number of CO2 readings.  
-- Seamless switching between manual and automatic modes.  
-- Dual transmission options: LoRaWAN or UART output.  
-- Full LoRaWAN stack integration (join, Tx/Rx callbacks, adaptive timers).  
-- Non-volatile memory (NVM) support for LoRaWAN context.  
-- Power management with configurable low-power modes.
 
 ---
 
@@ -113,15 +100,6 @@ User commands are sent through **UART2**, terminated by `\r\n`. Key commands inc
 | `mode`            | Sensor read mode (filtered/unfiltered output) | 2                             |
 | `selection`       | Operation mode: manual (1) or automatic (2) | 2                             |
 | `lora`            | Transmission medium: LoRaWAN (1) or UART (0) | 1                             |
-
----
-
-## Usage Notes
-
-- Use UART2 to send commands to configure device behavior and inspect sensor data.  
-- UART1 automatically receives sensor data lines according to mode.  
-- In **automatic mode**, sensor readings are acquired periodically, averaged, buffered, and transmitted without user intervention.  
-- In **manual mode**, user sends commands and receives immediate sensor output without averaging or buffering.
 
 ---
 
