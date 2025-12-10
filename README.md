@@ -30,7 +30,12 @@ This repository contains code implementations for STM32WL55CCU6 microcontroller 
 
 ### Automatic Mode
 
-- 
+- The board is programmed to automatically manage CO2 acquisitions and transmissions.
+- Specifically, the board is programmed to alternate sleep and active phases.
+- When awake, the system puts the sensor in Mode 2 (refer to Wiki to see the sensor description). It acquires n CO2 samples, averages them, and stores the average in a buffer. If the buffer is full (according to what the user has set), it is transmitted through LoRaWAN. By default: n = 10, buffer size = 5.
+- When in sleep, the microcontroller is put in Stop2 mode, while the sensor in Mode 0 (= sleep). No readings are performed, but the sensor is maintained powered on to keep measurement accuracy. The sleep phase duration can be set by the user (default is Ts = 30 s).
+
+
 
 
 
