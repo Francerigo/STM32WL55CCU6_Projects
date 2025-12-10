@@ -9,7 +9,7 @@ To test the RF matching performances, the follwing commands can be used.
 
 | Command     | Syntax Examples                          | Description |
 |-------------|------------------------------------------|-------------|
-| **AT+TCONF** | `AT+TCONF=868000000:14:4:12:4/5:0:0:1:16:25000:2:3<CR>` | **Time Synchronization Configuration**<br>- Configures network time synchronization for Class B/C<br>- `<mode>`: `0`=disable, `1`=enable auto-sync<br>- `<src>`: time source (0=network, 1=GPS)<br>- `<interval>`: sync interval in seconds<br>**Response:** `+TCONF: <mode>,<src>,<interval>` then `OK` [web:4] |
+| **AT+TCONF** | `AT+TCONF=868000000:14:4:12:4/5:0:0:1:16:25000:2:3<CR>` | **Sintax**<br>AT+TCONF=<freq>:<pow>:<bw>:<sf>:<cr>:<lna>:<pa>:<mod>:<paylen>:<freqdev>:<lowdropt>:<BT><CR>**Response:** `+TCONF: <mode>,<src>,<interval>` then `OK` [web:4] |
 | **AT+TTONE** | `AT+TTONE?\r`<br>`AT+TTONE=1,1000,500\r` | **Tone Generator Test**<br>- Emits test tone on GPIO/buzzer for diagnostics<br>- `<enable>`: `0`=off, `1`=on<br>- `<freq>`: frequency in Hz (e.g. 1000)<br>- `<dur>`: duration in ms (e.g. 500)<br>**Response:** `+TTONE: <enable>,<freq>,<dur>` then `OK` [web:4] |
 | **AT+TOFF**  | `AT+TOFF?\r`<br>`AT+TOFF\r`<br>`AT+TOFF=200\r` | **Tone Off / Stop**<br>- Stops ongoing tone OR sets off-interval for tone pattern<br>- No params: immediate stop<br>- `<ms>`: off duration between tones (ms)<br>**Response:** `+TOFF: <ms>` then `OK` [web:4] |
 
