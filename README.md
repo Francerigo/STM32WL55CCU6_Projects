@@ -1,127 +1,136 @@
-# STM32WL55CCU6 projects
+# STM32WL55CCU6 Projects
 
-This repository contains code implementations for STM32WL55CCU6 microcontroller based projects. Up to date (10/12/2025) it contains two projects, each in a different repo branch.
+This repository contains code implementations for STM32WL55CCU6 microcontroller based projects.  
+As of 10/12/2025, it contains two projects, each in a different repository branch.
 
-# Repository Structure
+---
 
+## Repository Structure
 
-## **"CO2_CozirLP5000_STM32WL55CCU6" branch**
-- This project, better described down below, is a code implementation for a CO2 measurement node, with the COZIR LP 5000 sensor.
+### **"CO2_CozirLP5000_STM32WL55CCU6" branch**
 
+- This project, detailed below, is a code implementation for a CO2 measurement node using the COZIR LP 5000 sensor.  
 
-## **"AT_Slave_STM32WL55CCU6" branch**
-- This project, is a code implementation following the Nucleo WL55JC1 AT Slave example, which was used to test the RF matching network.
+### **"AT_Slave_STM32WL55CCU6" branch**
 
+- This project follows the Nucleo WL55JC1 AT Slave example, and was used to test the RF matching network.
 
-# CO2 measurement node, based on STM32WL55CCU6 custom PCB and COZIR LP 5000
+---
 
-## Hardware connections
+# CO2 Measurement Node on STM32WL55CCU6 with COZIR LP 5000
 
-- The COZIR LP 5000 communicates with the STM32WL55CCU6 microcontroller through an UART interface (here UART 1, 9600 Baud).
-- The microcontroller is also using UART2 to communicate with the user.
-- To have a better understanding of the complete hardware configuration, refer to the wiki page, where the PCB is better described.
+## Hardware Connections
 
-## Firmware
+- The COZIR LP 5000 sensor communicates with the STM32WL55CCU6 microcontroller via **UART1** at 9600 baud.  
+- The microcontroller uses **UART2** to communicate with the user for command input and status output.  
+- For full hardware details, refer to the project wiki page describing the custom PCB.
 
-- The firmware is based on the LoRaWAN_End_Node skeleton, offered in the STM32 CubeWL package.
-- Its aim is to be an user friendly code, which can allow an user to easily interface with the board and with the sensor.
-- Through UART2 peripheral communication an user can firstly select between two operating modes: manual and automatic (the default one).
-- Please refer to the Wiki page to see the full command table, which a user can send to the board to configure it properly.
+## Firmware Overview
 
-### Automatic Mode
+- Based on the STM32 CubeWL LoRaWAN End Node skeleton, extended to interface with the COZIR LP 5000 sensor.  
+- Designed for user-friendly interaction through UART2 for configuration and data monitoring.
 
-- The board is programmed to automatically manage CO2 acquisitions and transmissions.
-- Specifically, the board is programmed to alternate sleep and active phases.
-- When awake, the system puts the sensor in Mode 2 (refer to Wiki to see the sensor description). It acquires n CO2 samples, averages them, and stores the average in a buffer. If the buffer is full (according to what the user has set), it is transmitted through LoRaWAN. By default: n = 10, buffer size = 5.
-- When in sleep, the microcontroller is put in Stop2 mode, while the sensor in Mode 0 (= sleep). No readings are performed, but the sensor is maintained powered on to keep measurement accuracy. The sleep phase duration can be set by the user (default is Ts = 30 s).
+---
+
+## Operation Modes
+
+### Manual Mode
+
+- The user interacts with the board via UART2 commands.  
+- The board waits for sensor data lines on UART1 and prints them directly or interprets commands.  
+- Users can query sensor values or configure parameters on demand.  
+- Sensor data is **not automatically averaged or buffered** in this mode.
+
+### Automatic Mode (Default)
+
+- The board autonomously manages data acquisition and transmission cycles.  
+- The microcontroller wakes periodically, setting the sensor to **Mode 2** (refer to sensor documentation).  
+- It acquires *n* CO2 samples (default 10), averages them, and stores the averages in an internal buffer.  
+- Once the buffer fills (default size 5 averages), it transmits the data via LoRaWAN (or UART if selected).  
+- During sleep phases, the microcontroller enters **Stop2 mode** and the sensor into **Mode 0 (sleep)** while keeping power supplied for accuracy.  
+- Sleep duration (*Ts*) is configurable by the user; default is 30 seconds.
+
+---
 
 ## Key Features
 
-- UART interrupt-based reception from CO2 sensor and PC terminal  
-- Buffering and averaging of CO2 values over configurable number of samples  
-- Dynamic switching between manual and auto data acquisition modes  
-- Switching between LoRaWAN and UART for data output  
-- LoRaWAN stack integration with join, send, receive callbacks and adaptive transmission timer  
-- NVM support for LoRaWAN context storage and restoration  
-- Power management hooks with low-power mode enabling/disabling  
+- UART interrupt-driven reception from both CO2 sensor (UART1) and PC terminal (UART2).  
+- Buffering and averaging configurable number of CO2 readings.  
+- Seamless switching between manual and automatic modes.  
+- Dual transmission options: LoRaWAN or UART output.  
+- Full LoRaWAN stack integration (join, Tx/Rx callbacks, adaptive timers).  
+- Non-volatile memory (NVM) support for LoRaWAN context.  
+- Power management with configurable low-power modes.
 
-## Directory Structure
+---
 
-- `lora_app.c` — Application source file with main logic and callbacks  
-- `platform.h`, `sys_app.h` — Board and system abstraction  
-- `lora_info.h`, `LmHandler.h` — LoRaWAN middleware and stack  
-- `adc_if.h` — ADC Interface (for possible sensor extensions)  
-- `flash_if.h` — Flash memory interface for NVM  
-- `usart.h` — UART serial interface  
+## Important Configuration Files
 
-## Architecture and Flow
+| File                                                      | Description                                                                                           |
+|-----------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| `Custom_board_LoRa_WL55CCU6/LoRaWAN/App/lora_app.c`       | Core application logic and callbacks handling sensor data, UART, and LoRaWAN communication.       |
+| `Custom_board_LoRa_WL55CCU6/LoRaWAN/App/se-identity.h`    | LoRaWAN keys (recommended to modify through CubeMX `.ioc` file, not here).                         |
+| `Custom_board_LoRa_WL55CCU6/Core/Src/main.c`               | Main firmware entry point.                                                                          |
+| `Custom_board_LoRa_WL55CCU6/Core/Src/stm32_lpm_if.c`       | Low power mode management functions.                                                               |
+| `Custom_board_LoRa_WL55CCU6/Core/Inc/sys_conf.h`           | Initial configuration: disables Stop2 mode at startup for UART config, later re-enabled.           |
+| `Custom_board_LoRa_WL55CCU6/Core/Inc/utilities_def.h`      | Task ID declarations for sequencer-controlled tasks.                                              |
+| `Custom_board_LoRa_WL55CCU6/Drivers/BSP/STM32WLxx_Nucleo/` | Radio configuration files — manage RF switch pins, LP/HP transmission power, and TCXO enablement. |
 
-### Initialization
+---
 
-- `LoRaWAN_Init()`  
-  - Initializes flash, LoRaWAN stack, timers, UART callbacks, and modes  
-  - Registers tasks with the sequencer (`UTIL_SEQ`)  
-  - Starts Join procedure and periodic TX timer (if using `TX_ON_TIMER` event)  
+## Important Reminders
 
-### UART Communication
+- **CubeMX Regeneration:**  
+  Remove the UART Rx Callback from `Custom_board_LoRa_WL55CCU6/Core/Src/usart_if.c` because it is implemented in `lora_app.c`.  
 
-- **UART1:** Sensor interface  
-  - Interrupt-driven RX  
-  - Two operation modes:  
-    - Manual: interpret and respond to sensor strings and commands  
-    - Automatic: read periodic sensor data, buffer multiple readings, average, and store for LoRa send  
-- **UART2:** PC terminal interface  
-  - Command parser for mode switching (`selection`), transmission mode (`lora`), and reading parameters  
-  - Acknowledges user commands and prints UART/LoRa transmission info  
+- **Transmission Control:**  
+  After regenerating code, remember to **comment out or remove in `OnTxTimerEvent`** the line that triggers transmission, since the CO2 reading routine manages transmissions.
 
-### Sensor Reading and Data Handling
+---
 
-- Task `readCO2` sends `"Z\r\n"` command to sensor to request filtered CO2 concentration  
-- 10 readings accumulated in `buf_co2[]`, averaged, and stored in `AppDataBuffer`  
-- Automatic transmissions sent after buffer is full or by timer events  
+## UART Command Interface
 
-### LoRaWAN Events and Callbacks
+User commands are sent through **UART2**, terminated by `\r\n`. Key commands include:
 
-- `SendTxData()` sends collected application buffer via LoRaWAN  
-- `OnTxTimerEvent()` timer callback triggers periodic sensor reads/transmissions  
-- Callbacks handle join status, confirmed/unconfirmed TX, RX downlink frames, beacon status, class change, context storage/restoration  
+| Command               | Description                                                            | Notes                                        |
+|-----------------------|------------------------------------------------------------------------|----------------------------------------------|
+| `c\r\n`               | Toggle between manual and automatic operation modes                   | Automatic mode is default                     |
+| `l\r\n`               | Toggle data output between LoRaWAN (default) and UART transmission    |                                              |
+| `t<number>\r\n`       | Set transmission periodicity in seconds                               | For example, `t10\r\n` sets 10 seconds        |
+| `n<number>\r\n`       | Set number of sensor samples averaged before storing or transmitting  | For example, `n5\r\n` sets average of 5 samples |
+| `K <mode_number>\r\n` | Set sensor sensor output mode (in manual mode)                        | See sensor datasheet; 0,1,2 available         |
+| `Z\r\n` or sensor data lines | Sensor responses, automatically requested in auto mode | Sensor sends filtered CO2 concentration       |
 
-### Application Data Structure
-
-- `AppDataBuffer[]` holds CO2 average samples formatted as 2-byte integers for LoRa payload  
-- Buffer length and data transmission controlled dynamically based on modes and user input  
+---
 
 ## Configurable Parameters
 
-| Parameter         | Description                            | Default Value               |
-|-------------------|------------------------------------|-----------------------------|
-| `readings`        | Number of measurements averaged      | 10                          |
-| `readingInterval` | Interval between sensor reads (ms)   | 500                         |
-| `TxPeriodicity`   | Periodicity of LoRa transmissions (ms) | Defined by `APP_TX_DUTYCYCLE` |
-| `mode`            | Output mode (filtered/unfiltered)    | 2                           |
-| `selection`       | Operation mode (manual=1, auto=2)    | 2                           |
-| `lora`            | Transmission mode (LoRa=1, UART=0)   | 1                           |
+| Parameter         | Description                              | Default Value                 |
+|-------------------|--------------------------------------|-------------------------------|
+| `readings`        | Number of CO2 samples to average per cycle | 10                            |
+| `readingInterval` | Interval between sensor readings (milliseconds) | 500                           |
+| `TxPeriodicity`   | Periodicity between LoRa transmissions (milliseconds) | Defined by `APP_TX_DUTYCYCLE` |
+| `mode`            | Sensor read mode (filtered/unfiltered output) | 2                             |
+| `selection`       | Operation mode: manual (1) or automatic (2) | 2                             |
+| `lora`            | Transmission medium: LoRaWAN (1) or UART (0) | 1                             |
+
+---
 
 ## Usage Notes
 
-- Send commands on UART2 console to toggle modes:  
-  - `'c'` to switch between manual and automatic reading modes  
-  - `'l'` to toggle between LoRaWAN and UART transmission  
-  - `'tNNN'` to set transmission periodicity (e.g., `t10` for 10 seconds)  
-  - `'nNNN'` to set number of samples averaged per cycle  
-- UART1 receives sensor data line-by-line and processes accordingly  
-- Buffer of averaged readings transmits via LoRaWAN when full or can be printed on UART  
+- Use UART2 to send commands to configure device behavior and inspect sensor data.  
+- UART1 automatically receives sensor data lines according to mode.  
+- In **automatic mode**, sensor readings are acquired periodically, averaged, buffered, and transmitted without user intervention.  
+- In **manual mode**, user sends commands and receives immediate sensor output without averaging or buffering.
 
-
-
-
-
-
-
-
+---
 
 ## Contributions
-Feel free to contribute by improving the existing code or adding new features. Open an issue or submit a pull request if you have any suggestions.
+
+Feel free to contribute by improving the existing code or adding new features. Submit issues or pull requests for suggestions.
+
+---
 
 ## License
+
 This project is licensed under the MIT License. See the LICENSE file for details.
