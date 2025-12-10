@@ -26,6 +26,7 @@ This repository contains code implementations for STM32WL55CCU6 microcontroller 
 - The firmware is based on the LoRaWAN_End_Node skeleton, offered in the STM32 CubeWL package.
 - Its aim is to be an user friendly code, which can allow an user to easily interface with the board and with the sensor.
 - Through UART2 peripheral communication an user can firstly select between two operating modes: manual and automatic (the default one).
+- Please refer to the Wiki page to see the full command table, which a user can send to the board to configure it properly.
 
 ### Automatic Mode
 
