@@ -96,7 +96,7 @@ User commands are sent through **UART2**, terminated by `\r\n`. Key commands inc
 |-------------------|--------------------------------------|-------------------------------|
 | `readings`        | Number of CO2 samples to average per cycle | 10                            |
 | `readingInterval` | Interval between sensor readings (milliseconds) | 500                           |
-| `TxPeriodicity`   | Periodicity between LoRa transmissions (milliseconds) | Defined by `APP_TX_DUTYCYCLE` |
+| `TxPeriodicity`   | Periodicity between acquisitions (milliseconds) | Defined by `APP_TX_DUTYCYCLE` |
 | `mode`            | Sensor read mode (filtered/unfiltered output) | 2                             |
 | `selection`       | Operation mode: manual (1) or automatic (2) | 2                             |
 | `lora`            | Transmission medium: LoRaWAN (1) or UART (0) | 1                             |
