@@ -9,7 +9,7 @@ This repository contains code implementations for STM32WL55CCU6 microcontroller 
 - This project, better described down below, is a code implementation for a CO2 measurement node, with the COZIR LP 5000 sensor.
 
 
-## **"AT_Slave_STM32WL55CCU6" branch **
+## **"AT_Slave_STM32WL55CCU6" branch**
 - This project, is a code implementation following the Nucleo WL55JC1 AT Slave example, which was used to test the RF matching network.
 
 
