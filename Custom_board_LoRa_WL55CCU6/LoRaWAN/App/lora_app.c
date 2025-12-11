@@ -66,17 +66,11 @@ uint8_t readings = 10;
 uint16_t buf_co2[100];
 uint16_t avg_co2 = 0;
 uint8_t i = 0;
-//uint8_t buf_uart[12];
-//uint8_t TxBufferMode[5]="K 2\r\n";
-//uint8_t TxBufferModeone[5]="K 1\r\n";
-//uint8_t TxBufferModezero[5]="K 0\r\n";
 uint8_t TxBufferFilteredReading[3]="Z\r\n";
-//uint8_t RxBuffermode[9] = {0};
 uint8_t RdBuffer[BUFFSIZE];    // Buffer circolare per dati dal sensore
 uint8_t RdPCBuffer[BUFFSIZE];  // Buffer lineare per comandi dal PC
 uint16_t InS = 0, PCPtr = 0;
 uint8_t data[] = "Received\r\n";
-//uint8_t dataerr[] = "Error\r\n";
 uint8_t mode;
 char out[80];
 char outm[80];
@@ -445,7 +439,6 @@ void LoRaWAN_Init(void)
   LmHandlerConfigure(&LmHandlerParams);
 
   /* USER CODE BEGIN LoRaWAN_Init_2 */
-  //UTIL_TIMER_Start(&JoinLedTimer);
 
   /* USER CODE END LoRaWAN_Init_2 */
 
@@ -470,14 +463,6 @@ void LoRaWAN_Init(void)
 }
 
 /* USER CODE BEGIN PB_Callbacks */
-
-/*void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
-{
-    if (huart->Instance == USART2) {
-        tx_in_progress = 0;
-    }
-}
-*/
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
@@ -534,18 +519,18 @@ void printOnUart(void){
 		}
 	}
 
-	// 4) Terminatore di riga
+	// 4) Line end
 	pos += snprintf((char*)asciiTxBuf + pos, ASCII_TX_MAX - pos, "\r\n");
 	if (pos < ASCII_TX_MAX) asciiTxBuf[pos] = '\0';
 	asciiTxLen = (uint16_t)pos;
 
-	// 5) Avvia trasmissione non-bloccante solo se non ce n'è già una in corso
+	// 5) Starts non blocking transmission only if there is not one ongoing
 	if (!tx_in_progress)
 	{
 		tx_in_progress = 1;
 		if (HAL_UART_Transmit(&huart2, asciiTxBuf, asciiTxLen,100) != HAL_OK)
 		{
-			// errore nel lancio: libera la flag così possiamo provare dopo
+			// Error: reset the flag to retry later
 			tx_in_progress = 0;
 		}
 	}
@@ -555,14 +540,14 @@ void commUsart1(void)
 {
 	///////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////
-	// Modalità Manuale
-	// Attesa dei comandi da parte dell'utente
-	// Di default modalità 2 (no continua stampa su uart)
+	// Manual operation
+	// Wait for user commands
+	// By default, the sensor is in mode 2
 	///////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////
 
 
-	if (selection == 1){
+	if (selection == 1){ // Selection ==1 refers to manual mode
 
 		HAL_UART_Receive_IT(&huart1, rx_buff, 1);
 		RdBuffer[InS] = rx_buff[0];
@@ -605,13 +590,13 @@ void commUsart1(void)
 	}
 
 
-	///////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////
-	// Modalità Automatica
-	// Raccolta di 10 misure, media, accumulo della media su un buffer
-	// Trasmissione del buffer delle medie quando è pieno
-	///////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////////////////////////////
+	// Automatic mode
+	// Start an acquisition when you wake up, gather some measurements and average them
+	// Transmit the buffer via LoRaWAN when it is full
+	//////////////////////////////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -622,38 +607,38 @@ void commUsart1(void)
 		//int lenm = snprintf(outm, sizeof(outm), "%u\r\n", (unsigned)rx_buff[0]);
 		//HAL_UART_Transmit(&huart2, (uint8_t*)outm, lenm, 100);
 
-		// 2) Metto il byte ricevuto in RdBuffer[InS]
+		// 2) Pute the received byte in RdBuffer[InS]
 		RdBuffer[InS] = rx_buff[0];
 
-		// 3) Se ho chiuso la riga ("\n") o ho saturato il buffer:
+		// 3) If line is closed ("\n") or buffer is full:
 		if (RdBuffer[InS++] == '\n' || InS == BUFFSIZE)
 		{
 			InS = 0;
-			//  3a) Se è una riga di risposta CO2 (secondo carattere = 'Z')
+			//  3a) If it's an answer with CO2 reading (second character = 'Z' because there is a leading space in the response)
 			if (RdBuffer[1] == 'Z' && mode == 2)
 			{
 		        //HAL_UART_Transmit(&huart2, (uint8_t*)("Extracting new value\r\n"), 22, 0xFFFF);
 
-				// Estraggo il valore numerico
+				// Extract numeric value
 				uint16_t newValue = (uint16_t)atoi((char*)RdBuffer + 3);
 				//len = sprintf(out, "Filtered CO2 concentration: %d ppm\r\n", newValue);
 				//HAL_UART_Transmit(&huart2, (uint8_t*)out, len, 100);
 				//InS = 0; // azzero indice RdBuffer subito
 
-				// Accumulo su buf_co2 e conto fino a 10 letture
+				// Accumulate the average in the buffer and increase the counter
 				buf_co2[i++] = newValue;
 				if (i == readings)
 				{
 					//UTIL_TIMER_Stop(&ReadTimer);
 
 
-					// Calcolo media e la scrivo nel buffer LoRa
+					// Calculate the average
 					avg_co2 = average_u16_int(buf_co2, readings);
 					len = sprintf(out, "%d samples average: %d ppm\r\n", readings, avg_co2);
 					HAL_UART_Transmit(&huart2, (uint8_t*)out, len, 100);
 					i = 0;
 
-					// Metto i due byte di avg_co2 in AppDataBuffer
+					// Put the two bytes of avg_co2 in AppDataBuffer
 					AppDataBuffer[buffer_index++] = (uint8_t)(avg_co2 & 0xFF);
 					AppDataBuffer[buffer_index++] = (uint8_t)((avg_co2 >> 8) & 0xFF);
 					//AppData.BufferSize = buffer_index;
@@ -661,7 +646,7 @@ void commUsart1(void)
 			        HAL_UART_Transmit(&huart1, (uint8_t*)("K 0\r\n"), 5, 0xFFFF);
 					count = 0;
 
-					// Se ho raccolto x medie invio tramite lora (se lora == 1) o tramite UART (se lora == 0)
+					// If I have x averages, I send them via LoRaWAN (if variable lora == 1) or via UART (if variable lora == 0)
 					if (buffer_index >= 10)
 					{
 						if(lora){
@@ -680,7 +665,7 @@ void commUsart1(void)
 							UTIL_TIMER_Start(&TxTimer);
 						}
 
-						// 6) Resetta il buffer di raccolta così possiamo continuare a popolarlo
+						// 6) Reset the buffer index
 						buffer_index = 0;
 					}
 
@@ -691,7 +676,7 @@ void commUsart1(void)
 				return;
 			}
 
-			//  3b) Se è un comando di cambio modalità (“K …”)
+			//  3b) If its a mode change command (“K …”)
 			else if (RdBuffer[1] == 'K')
 			{
 				//HAL_UART_Transmit(&huart2, (uint8_t*)"K\r\n", 3, 100);
@@ -715,7 +700,7 @@ void commUsart1(void)
 				return;
 			}
 
-			//  3c) Se arriva qualsiasi altra cosa
+			//  3c) If anything else arrives, do nothing
 			else
 			{
 				//if(InS>0) InS--;
