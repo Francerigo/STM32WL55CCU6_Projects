@@ -1833,7 +1833,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x16 ./Core/Src/syscalls.o
  .debug_macro   0x00000000       0xce ./Core/Src/syscalls.o
  .debug_line    0x00000000      0x8a8 ./Core/Src/syscalls.o
- .debug_str     0x00000000     0x987d ./Core/Src/syscalls.o
+ .debug_str     0x00000000     0x987a ./Core/Src/syscalls.o
  .comment       0x00000000       0x44 ./Core/Src/syscalls.o
  .debug_frame   0x00000000      0x2ac ./Core/Src/syscalls.o
  .ARM.attributes
@@ -1896,7 +1896,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x6a ./Core/Src/sysmem.o
  .debug_macro   0x00000000      0x1df ./Core/Src/sysmem.o
  .debug_line    0x00000000      0x579 ./Core/Src/sysmem.o
- .debug_str     0x00000000     0x6095 ./Core/Src/sysmem.o
+ .debug_str     0x00000000     0x6092 ./Core/Src/sysmem.o
  .comment       0x00000000       0x44 ./Core/Src/sysmem.o
  .debug_frame   0x00000000       0x34 ./Core/Src/sysmem.o
  .ARM.attributes
@@ -3494,7 +3494,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x45a ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_dma_ex.o
  .debug_macro   0x00000000      0x3c0 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_dma_ex.o
  .debug_line    0x00000000      0xb4e ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_dma_ex.o
- .debug_str     0x00000000    0xb9340 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_dma_ex.o
+ .debug_str     0x00000000    0xb933d ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_dma_ex.o
  .comment       0x00000000       0x44 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_dma_ex.o
  .debug_frame   0x00000000       0xd4 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_dma_ex.o
  .ARM.attributes
@@ -3634,7 +3634,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x45a ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_exti.o
  .debug_macro   0x00000000      0x3c0 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_exti.o
  .debug_line    0x00000000      0xcf0 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_exti.o
- .debug_str     0x00000000    0xb9191 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_exti.o
+ .debug_str     0x00000000    0xb918e ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_exti.o
  .comment       0x00000000       0x44 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_exti.o
  .debug_frame   0x00000000      0x174 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_exti.o
  .ARM.attributes
@@ -5596,7 +5596,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x11 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_ll_adc.o
  .debug_macro   0x00000000      0xaae ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_ll_adc.o
  .debug_line    0x00000000       0x91 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_ll_adc.o
- .debug_str     0x00000000     0x2e31 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_ll_adc.o
+ .debug_str     0x00000000     0x2e2e ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_ll_adc.o
  .comment       0x00000000       0x44 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_ll_adc.o
  .ARM.attributes
                 0x00000000       0x2e ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_ll_adc.o
@@ -8589,7 +8589,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x47 ./Middlewares/LoRaWAN/RegionAS923.o
  .debug_macro   0x00000000      0x113 ./Middlewares/LoRaWAN/RegionAS923.o
  .debug_line    0x00000000      0xd0b ./Middlewares/LoRaWAN/RegionAS923.o
- .debug_str     0x00000000     0xc16a ./Middlewares/LoRaWAN/RegionAS923.o
+ .debug_str     0x00000000     0xc167 ./Middlewares/LoRaWAN/RegionAS923.o
  .comment       0x00000000       0x44 ./Middlewares/LoRaWAN/RegionAS923.o
  .debug_frame   0x00000000      0x354 ./Middlewares/LoRaWAN/RegionAS923.o
  .ARM.attributes
@@ -8771,7 +8771,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xe6 ./Middlewares/LoRaWAN/RegionAU915.o
  .debug_macro   0x00000000       0x5e ./Middlewares/LoRaWAN/RegionAU915.o
  .debug_line    0x00000000      0xcd5 ./Middlewares/LoRaWAN/RegionAU915.o
- .debug_str     0x00000000     0xc2a0 ./Middlewares/LoRaWAN/RegionAU915.o
+ .debug_str     0x00000000     0xc29d ./Middlewares/LoRaWAN/RegionAU915.o
  .comment       0x00000000       0x44 ./Middlewares/LoRaWAN/RegionAU915.o
  .debug_frame   0x00000000      0x358 ./Middlewares/LoRaWAN/RegionAU915.o
  .ARM.attributes
@@ -8901,7 +8901,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x47 ./Middlewares/LoRaWAN/RegionBaseUS.o
  .debug_macro   0x00000000       0x5e ./Middlewares/LoRaWAN/RegionBaseUS.o
  .debug_line    0x00000000      0xb4f ./Middlewares/LoRaWAN/RegionBaseUS.o
- .debug_str     0x00000000     0xabd0 ./Middlewares/LoRaWAN/RegionBaseUS.o
+ .debug_str     0x00000000     0xabcd ./Middlewares/LoRaWAN/RegionBaseUS.o
  .comment       0x00000000       0x44 ./Middlewares/LoRaWAN/RegionBaseUS.o
  .debug_frame   0x00000000       0xb0 ./Middlewares/LoRaWAN/RegionBaseUS.o
  .ARM.attributes
@@ -9077,7 +9077,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xe2 ./Middlewares/LoRaWAN/RegionCN470.o
  .debug_macro   0x00000000       0x5e ./Middlewares/LoRaWAN/RegionCN470.o
  .debug_line    0x00000000      0xcd5 ./Middlewares/LoRaWAN/RegionCN470.o
- .debug_str     0x00000000     0xc211 ./Middlewares/LoRaWAN/RegionCN470.o
+ .debug_str     0x00000000     0xc20e ./Middlewares/LoRaWAN/RegionCN470.o
  .comment       0x00000000       0x44 ./Middlewares/LoRaWAN/RegionCN470.o
  .debug_frame   0x00000000      0x358 ./Middlewares/LoRaWAN/RegionCN470.o
  .ARM.attributes
@@ -9228,7 +9228,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x5e ./Middlewares/LoRaWAN/RegionCN470A20.o
  .debug_macro   0x00000000       0x5f ./Middlewares/LoRaWAN/RegionCN470A20.o
  .debug_line    0x00000000      0xc88 ./Middlewares/LoRaWAN/RegionCN470A20.o
- .debug_str     0x00000000     0xb0ce ./Middlewares/LoRaWAN/RegionCN470A20.o
+ .debug_str     0x00000000     0xb0cb ./Middlewares/LoRaWAN/RegionCN470A20.o
  .comment       0x00000000       0x44 ./Middlewares/LoRaWAN/RegionCN470A20.o
  .debug_frame   0x00000000      0x14c ./Middlewares/LoRaWAN/RegionCN470A20.o
  .ARM.attributes
@@ -9378,7 +9378,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x5e ./Middlewares/LoRaWAN/RegionCN470A26.o
  .debug_macro   0x00000000       0x52 ./Middlewares/LoRaWAN/RegionCN470A26.o
  .debug_line    0x00000000      0xc20 ./Middlewares/LoRaWAN/RegionCN470A26.o
- .debug_str     0x00000000     0xaffd ./Middlewares/LoRaWAN/RegionCN470A26.o
+ .debug_str     0x00000000     0xaffa ./Middlewares/LoRaWAN/RegionCN470A26.o
  .comment       0x00000000       0x44 ./Middlewares/LoRaWAN/RegionCN470A26.o
  .debug_frame   0x00000000      0x14c ./Middlewares/LoRaWAN/RegionCN470A26.o
  .ARM.attributes
@@ -9531,7 +9531,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x7b ./Middlewares/LoRaWAN/RegionCN470B20.o
  .debug_macro   0x00000000       0x5f ./Middlewares/LoRaWAN/RegionCN470B20.o
  .debug_line    0x00000000      0xbfd ./Middlewares/LoRaWAN/RegionCN470B20.o
- .debug_str     0x00000000     0xb3b7 ./Middlewares/LoRaWAN/RegionCN470B20.o
+ .debug_str     0x00000000     0xb3b4 ./Middlewares/LoRaWAN/RegionCN470B20.o
  .comment       0x00000000       0x44 ./Middlewares/LoRaWAN/RegionCN470B20.o
  .debug_frame   0x00000000      0x140 ./Middlewares/LoRaWAN/RegionCN470B20.o
  .ARM.attributes
@@ -9683,7 +9683,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x52 ./Middlewares/LoRaWAN/RegionCN470B26.o
  .debug_macro   0x00000000       0x52 ./Middlewares/LoRaWAN/RegionCN470B26.o
  .debug_line    0x00000000      0xb6d ./Middlewares/LoRaWAN/RegionCN470B26.o
- .debug_str     0x00000000     0xb14f ./Middlewares/LoRaWAN/RegionCN470B26.o
+ .debug_str     0x00000000     0xb14c ./Middlewares/LoRaWAN/RegionCN470B26.o
  .comment       0x00000000       0x44 ./Middlewares/LoRaWAN/RegionCN470B26.o
  .debug_frame   0x00000000      0x144 ./Middlewares/LoRaWAN/RegionCN470B26.o
  .ARM.attributes
@@ -9857,7 +9857,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x47 ./Middlewares/LoRaWAN/RegionCN779.o
  .debug_macro   0x00000000       0xe4 ./Middlewares/LoRaWAN/RegionCN779.o
  .debug_line    0x00000000      0xd0a ./Middlewares/LoRaWAN/RegionCN779.o
- .debug_str     0x00000000     0xbfe6 ./Middlewares/LoRaWAN/RegionCN779.o
+ .debug_str     0x00000000     0xbfe3 ./Middlewares/LoRaWAN/RegionCN779.o
  .comment       0x00000000       0x44 ./Middlewares/LoRaWAN/RegionCN779.o
  .debug_frame   0x00000000      0x354 ./Middlewares/LoRaWAN/RegionCN779.o
  .ARM.attributes
@@ -10146,7 +10146,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x47 ./Middlewares/LoRaWAN/RegionEU433.o
  .debug_macro   0x00000000       0xe4 ./Middlewares/LoRaWAN/RegionEU433.o
  .debug_line    0x00000000      0xd0a ./Middlewares/LoRaWAN/RegionEU433.o
- .debug_str     0x00000000     0xbfe6 ./Middlewares/LoRaWAN/RegionEU433.o
+ .debug_str     0x00000000     0xbfe3 ./Middlewares/LoRaWAN/RegionEU433.o
  .comment       0x00000000       0x44 ./Middlewares/LoRaWAN/RegionEU433.o
  .debug_frame   0x00000000      0x354 ./Middlewares/LoRaWAN/RegionEU433.o
  .ARM.attributes
@@ -10435,7 +10435,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x47 ./Middlewares/LoRaWAN/RegionIN865.o
  .debug_macro   0x00000000       0xe4 ./Middlewares/LoRaWAN/RegionIN865.o
  .debug_line    0x00000000      0xd08 ./Middlewares/LoRaWAN/RegionIN865.o
- .debug_str     0x00000000     0xbfff ./Middlewares/LoRaWAN/RegionIN865.o
+ .debug_str     0x00000000     0xbffc ./Middlewares/LoRaWAN/RegionIN865.o
  .comment       0x00000000       0x44 ./Middlewares/LoRaWAN/RegionIN865.o
  .debug_frame   0x00000000      0x354 ./Middlewares/LoRaWAN/RegionIN865.o
  .ARM.attributes
@@ -10609,7 +10609,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x47 ./Middlewares/LoRaWAN/RegionKR920.o
  .debug_macro   0x00000000       0xeb ./Middlewares/LoRaWAN/RegionKR920.o
  .debug_line    0x00000000      0xd0b ./Middlewares/LoRaWAN/RegionKR920.o
- .debug_str     0x00000000     0xc05a ./Middlewares/LoRaWAN/RegionKR920.o
+ .debug_str     0x00000000     0xc057 ./Middlewares/LoRaWAN/RegionKR920.o
  .comment       0x00000000       0x44 ./Middlewares/LoRaWAN/RegionKR920.o
  .debug_frame   0x00000000      0x354 ./Middlewares/LoRaWAN/RegionKR920.o
  .ARM.attributes
@@ -10783,7 +10783,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x47 ./Middlewares/LoRaWAN/RegionRU864.o
  .debug_macro   0x00000000       0xdd ./Middlewares/LoRaWAN/RegionRU864.o
  .debug_line    0x00000000      0xd09 ./Middlewares/LoRaWAN/RegionRU864.o
- .debug_str     0x00000000     0xbfa0 ./Middlewares/LoRaWAN/RegionRU864.o
+ .debug_str     0x00000000     0xbf9d ./Middlewares/LoRaWAN/RegionRU864.o
  .comment       0x00000000       0x44 ./Middlewares/LoRaWAN/RegionRU864.o
  .debug_frame   0x00000000      0x354 ./Middlewares/LoRaWAN/RegionRU864.o
  .ARM.attributes
@@ -10961,7 +10961,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xd7 ./Middlewares/LoRaWAN/RegionUS915.o
  .debug_macro   0x00000000       0x5e ./Middlewares/LoRaWAN/RegionUS915.o
  .debug_line    0x00000000      0xcd5 ./Middlewares/LoRaWAN/RegionUS915.o
- .debug_str     0x00000000     0xc20a ./Middlewares/LoRaWAN/RegionUS915.o
+ .debug_str     0x00000000     0xc207 ./Middlewares/LoRaWAN/RegionUS915.o
  .comment       0x00000000       0x44 ./Middlewares/LoRaWAN/RegionUS915.o
  .debug_frame   0x00000000      0x358 ./Middlewares/LoRaWAN/RegionUS915.o
  .ARM.attributes
@@ -16934,153 +16934,153 @@ LOAD C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_line    0x00047751      0x84f ./Utilities/stm32_tiny_sscanf.o
  .debug_line    0x00047fa0      0x913 ./Utilities/stm32_tiny_vsnprintf.o
 
-.debug_str      0x00000000    0xe0fb0
- .debug_str     0x00000000    0xb8c6c ./Core/Src/adc.o
-                              0xb969e (size before relaxing)
- .debug_str     0x000b8c6c     0x5332 ./Core/Src/adc_if.o
-                              0xbe7e8 (size before relaxing)
- .debug_str     0x000bdf9e      0x441 ./Core/Src/dma.o
-                              0xb9523 (size before relaxing)
- .debug_str     0x000be3df      0x441 ./Core/Src/flash_if.o
-                              0xbe1f3 (size before relaxing)
- .debug_str     0x000be820       0xf7 ./Core/Src/gpio.o
-                              0xb91c5 (size before relaxing)
- .debug_str     0x000be917      0x2c5 ./Core/Src/main.o
-                              0xb93ed (size before relaxing)
- .debug_str     0x000bebdc      0x49a ./Core/Src/rtc.o
-                              0xb9a52 (size before relaxing)
- .debug_str     0x000bf076      0x163 ./Core/Src/stm32_lpm_if.o
-                              0xbdf55 (size before relaxing)
- .debug_str     0x000bf1d9       0x2c ./Core/Src/stm32wlxx_hal_msp.o
-                              0xb8ead (size before relaxing)
- .debug_str     0x000bf205      0x4b7 ./Core/Src/stm32wlxx_it.o
-                              0xb986a (size before relaxing)
- .debug_str     0x000bf6bc       0x9b ./Core/Src/subghz.o
-                              0xb96ef (size before relaxing)
- .debug_str     0x000bf757     0x1d8d ./Core/Src/sys_app.o
-                              0xc0178 (size before relaxing)
- .debug_str     0x000c14e4       0x18 ./Core/Src/sys_debug.o
-                              0xbacf3 (size before relaxing)
- .debug_str     0x000c14fc       0x9e ./Core/Src/system_stm32wlxx.o
-                              0xb90d9 (size before relaxing)
- .debug_str     0x000c159a     0x2976 ./Core/Src/timer_if.o
-                              0xc039c (size before relaxing)
- .debug_str     0x000c3f10      0x13c ./Core/Src/usart.o
-                              0xb9de2 (size before relaxing)
- .debug_str     0x000c404c      0x22b ./Core/Src/usart_if.o
-                              0xbd64c (size before relaxing)
- .debug_str     0x000c4277       0x44 ./Core/Startup/startup_stm32wl55ccux.o
-                                 0x8f (size before relaxing)
- .debug_str     0x000c42bb      0x18f ./Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_radio.o
-                              0xb9896 (size before relaxing)
- .debug_str     0x000c444a      0x880 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal.o
-                              0xb9efb (size before relaxing)
- .debug_str     0x000c4cca      0x8c6 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_adc.o
-                              0xb9da2 (size before relaxing)
- .debug_str     0x000c5590      0x1d1 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_adc_ex.o
-                              0xb96fb (size before relaxing)
- .debug_str     0x000c5761      0x3c9 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_cortex.o
-                              0xb9831 (size before relaxing)
- .debug_str     0x000c5b2a      0x2c8 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_dma.o
-                              0xb94c8 (size before relaxing)
- .debug_str     0x000c5df2      0x203 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_flash.o
-                              0xb9229 (size before relaxing)
- .debug_str     0x000c5ff5      0x5e0 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_flash_ex.o
-                              0xb9617 (size before relaxing)
- .debug_str     0x000c65d5      0x145 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_gpio.o
-                              0xb916c (size before relaxing)
- .debug_str     0x000c671a      0x527 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_pwr.o
-                              0xb956b (size before relaxing)
- .debug_str     0x000c6c41      0x6bd ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_pwr_ex.o
-                              0xb98cb (size before relaxing)
- .debug_str     0x000c72fe      0xa6f ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_rcc.o
-                              0xb9edf (size before relaxing)
- .debug_str     0x000c7d6d      0x57f ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_rcc_ex.o
-                              0xb9a3a (size before relaxing)
- .debug_str     0x000c82ec      0x2fb ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_rtc.o
-                              0xb95ca (size before relaxing)
- .debug_str     0x000c85e7      0x769 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_rtc_ex.o
-                              0xb9b04 (size before relaxing)
- .debug_str     0x000c8d50      0x8b2 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_subghz.o
-                              0xb9c86 (size before relaxing)
- .debug_str     0x000c9602      0x975 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_uart.o
-                              0xba151 (size before relaxing)
- .debug_str     0x000c9f77      0x228 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_uart_ex.o
-                              0xb984a (size before relaxing)
- .debug_str     0x000ca19f      0x12b ./LoRaWAN/App/app_lorawan.o
-                               0x86d6 (size before relaxing)
- .debug_str     0x000ca2ca     0x1e7c ./LoRaWAN/App/lora_app.o
-                              0xc1367 (size before relaxing)
- .debug_str     0x000cc146     0x1f92 ./LoRaWAN/App/lora_at.o
-                              0xc323d (size before relaxing)
- .debug_str     0x000ce0d8      0x165 ./LoRaWAN/App/lora_command.o
-                              0xbff71 (size before relaxing)
- .debug_str     0x000ce23d      0x1e8 ./LoRaWAN/App/lora_info.o
-                               0x9f33 (size before relaxing)
- .debug_str     0x000ce425      0x34e ./LoRaWAN/App/test_rf.o
-                              0xbf956 (size before relaxing)
- .debug_str     0x000ce773      0x1a1 ./LoRaWAN/Target/radio_board_if.o
-                              0xba7de (size before relaxing)
- .debug_str     0x000ce914     0x44fa ./Middlewares/LoRaWAN/LmHandler.o
-                              0xc4138 (size before relaxing)
- .debug_str     0x000d2e0e      0x254 ./Middlewares/LoRaWAN/LmhpCompliance.o
-                              0xc1813 (size before relaxing)
- .debug_str     0x000d3062       0x8b ./Middlewares/LoRaWAN/LmhpPackagesRegistration.o
-                              0xbfef9 (size before relaxing)
- .debug_str     0x000d30ed     0x2ac6 ./Middlewares/LoRaWAN/LoRaMac.o
-                              0x11689 (size before relaxing)
- .debug_str     0x000d5bb3       0xa2 ./Middlewares/LoRaWAN/LoRaMacAdr.o
-                               0xae93 (size before relaxing)
- .debug_str     0x000d5c55      0x31f ./Middlewares/LoRaWAN/LoRaMacClassB.o
-                               0xd43d (size before relaxing)
- .debug_str     0x000d5f74      0x204 ./Middlewares/LoRaWAN/LoRaMacCommands.o
-                               0xa065 (size before relaxing)
- .debug_str     0x000d6178      0x21e ./Middlewares/LoRaWAN/LoRaMacConfirmQueue.o
-                               0xa432 (size before relaxing)
- .debug_str     0x000d6396      0x4d1 ./Middlewares/LoRaWAN/LoRaMacCrypto.o
-                               0xb67f (size before relaxing)
- .debug_str     0x000d6867       0x78 ./Middlewares/LoRaWAN/LoRaMacParser.o
-                               0x8f34 (size before relaxing)
- .debug_str     0x000d68df       0xca ./Middlewares/LoRaWAN/LoRaMacSerializer.o
-                               0x8fed (size before relaxing)
- .debug_str     0x000d69a9       0x84 ./Middlewares/LoRaWAN/NvmDataMgmt.o
-                               0x9eaa (size before relaxing)
- .debug_str     0x000d6a2d     0x246e ./Middlewares/LoRaWAN/Region.o
-                               0xdcce (size before relaxing)
- .debug_str     0x000d8e9b      0xaad ./Middlewares/LoRaWAN/RegionCommon.o
-                               0xd38f (size before relaxing)
- .debug_str     0x000d9948      0x1a2 ./Middlewares/LoRaWAN/RegionEU868.o
-                               0xd7f2 (size before relaxing)
- .debug_str     0x000d9aea      0x2b0 ./Middlewares/LoRaWAN/cmac.o
-                               0x84b8 (size before relaxing)
- .debug_str     0x000d9d9a     0x1f67 ./Middlewares/LoRaWAN/lorawan_aes.o
-                               0x9159 (size before relaxing)
- .debug_str     0x000dbd01      0x5ce ./Middlewares/LoRaWAN/soft-se.o
-                               0xcc08 (size before relaxing)
- .debug_str     0x000dc2cf       0xe3 ./Middlewares/LoRaWAN/utilities.o
-                               0x8323 (size before relaxing)
- .debug_str     0x000dc3b2     0x1eae ./Middlewares/SubGHz_Phy/radio.o
-                              0xc24f9 (size before relaxing)
- .debug_str     0x000de260      0x6f5 ./Middlewares/SubGHz_Phy/radio_driver.o
-                              0xc0c80 (size before relaxing)
- .debug_str     0x000de955      0x1d8 ./Middlewares/SubGHz_Phy/radio_fw.o
-                              0xc0814 (size before relaxing)
- .debug_str     0x000deb2d      0x373 ./Utilities/stm32_adv_trace.o
-                               0x8dad (size before relaxing)
- .debug_str     0x000deea0      0x24c ./Utilities/stm32_lpm.o
-                               0x84ab (size before relaxing)
- .debug_str     0x000df0ec       0x72 ./Utilities/stm32_mem.o
-                               0x81ad (size before relaxing)
- .debug_str     0x000df15e      0x376 ./Utilities/stm32_seq.o
-                               0x878a (size before relaxing)
- .debug_str     0x000df4d4      0x450 ./Utilities/stm32_systime.o
-                               0x8b9e (size before relaxing)
- .debug_str     0x000df924      0x25e ./Utilities/stm32_timer.o
-                               0x86dd (size before relaxing)
- .debug_str     0x000dfb82     0x125f ./Utilities/stm32_tiny_sscanf.o
-                               0x8c6e (size before relaxing)
- .debug_str     0x000e0de1      0x1cf ./Utilities/stm32_tiny_vsnprintf.o
-                               0x69db (size before relaxing)
+.debug_str      0x00000000    0xe0fad
+ .debug_str     0x00000000    0xb8c69 ./Core/Src/adc.o
+                              0xb969b (size before relaxing)
+ .debug_str     0x000b8c69     0x5332 ./Core/Src/adc_if.o
+                              0xbe7e5 (size before relaxing)
+ .debug_str     0x000bdf9b      0x441 ./Core/Src/dma.o
+                              0xb9520 (size before relaxing)
+ .debug_str     0x000be3dc      0x441 ./Core/Src/flash_if.o
+                              0xbe1f0 (size before relaxing)
+ .debug_str     0x000be81d       0xf7 ./Core/Src/gpio.o
+                              0xb91c2 (size before relaxing)
+ .debug_str     0x000be914      0x2c5 ./Core/Src/main.o
+                              0xb93ea (size before relaxing)
+ .debug_str     0x000bebd9      0x49a ./Core/Src/rtc.o
+                              0xb9a4f (size before relaxing)
+ .debug_str     0x000bf073      0x163 ./Core/Src/stm32_lpm_if.o
+                              0xbdf52 (size before relaxing)
+ .debug_str     0x000bf1d6       0x2c ./Core/Src/stm32wlxx_hal_msp.o
+                              0xb8eaa (size before relaxing)
+ .debug_str     0x000bf202      0x4b7 ./Core/Src/stm32wlxx_it.o
+                              0xb9867 (size before relaxing)
+ .debug_str     0x000bf6b9       0x9b ./Core/Src/subghz.o
+                              0xb96ec (size before relaxing)
+ .debug_str     0x000bf754     0x1d8d ./Core/Src/sys_app.o
+                              0xc0175 (size before relaxing)
+ .debug_str     0x000c14e1       0x18 ./Core/Src/sys_debug.o
+                              0xbacf0 (size before relaxing)
+ .debug_str     0x000c14f9       0x9e ./Core/Src/system_stm32wlxx.o
+                              0xb90d6 (size before relaxing)
+ .debug_str     0x000c1597     0x2976 ./Core/Src/timer_if.o
+                              0xc0399 (size before relaxing)
+ .debug_str     0x000c3f0d      0x13c ./Core/Src/usart.o
+                              0xb9ddf (size before relaxing)
+ .debug_str     0x000c4049      0x22b ./Core/Src/usart_if.o
+                              0xbd649 (size before relaxing)
+ .debug_str     0x000c4274       0x44 ./Core/Startup/startup_stm32wl55ccux.o
+                                 0x8c (size before relaxing)
+ .debug_str     0x000c42b8      0x18f ./Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_radio.o
+                              0xb9893 (size before relaxing)
+ .debug_str     0x000c4447      0x880 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal.o
+                              0xb9ef8 (size before relaxing)
+ .debug_str     0x000c4cc7      0x8c6 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_adc.o
+                              0xb9d9f (size before relaxing)
+ .debug_str     0x000c558d      0x1d1 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_adc_ex.o
+                              0xb96f8 (size before relaxing)
+ .debug_str     0x000c575e      0x3c9 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_cortex.o
+                              0xb982e (size before relaxing)
+ .debug_str     0x000c5b27      0x2c8 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_dma.o
+                              0xb94c5 (size before relaxing)
+ .debug_str     0x000c5def      0x203 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_flash.o
+                              0xb9226 (size before relaxing)
+ .debug_str     0x000c5ff2      0x5e0 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_flash_ex.o
+                              0xb9614 (size before relaxing)
+ .debug_str     0x000c65d2      0x145 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_gpio.o
+                              0xb9169 (size before relaxing)
+ .debug_str     0x000c6717      0x527 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_pwr.o
+                              0xb9568 (size before relaxing)
+ .debug_str     0x000c6c3e      0x6bd ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_pwr_ex.o
+                              0xb98c8 (size before relaxing)
+ .debug_str     0x000c72fb      0xa6f ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_rcc.o
+                              0xb9edc (size before relaxing)
+ .debug_str     0x000c7d6a      0x57f ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_rcc_ex.o
+                              0xb9a37 (size before relaxing)
+ .debug_str     0x000c82e9      0x2fb ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_rtc.o
+                              0xb95c7 (size before relaxing)
+ .debug_str     0x000c85e4      0x769 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_rtc_ex.o
+                              0xb9b01 (size before relaxing)
+ .debug_str     0x000c8d4d      0x8b2 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_subghz.o
+                              0xb9c83 (size before relaxing)
+ .debug_str     0x000c95ff      0x975 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_uart.o
+                              0xba14e (size before relaxing)
+ .debug_str     0x000c9f74      0x228 ./Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_uart_ex.o
+                              0xb9847 (size before relaxing)
+ .debug_str     0x000ca19c      0x12b ./LoRaWAN/App/app_lorawan.o
+                               0x86d3 (size before relaxing)
+ .debug_str     0x000ca2c7     0x1e7c ./LoRaWAN/App/lora_app.o
+                              0xc1364 (size before relaxing)
+ .debug_str     0x000cc143     0x1f92 ./LoRaWAN/App/lora_at.o
+                              0xc323a (size before relaxing)
+ .debug_str     0x000ce0d5      0x165 ./LoRaWAN/App/lora_command.o
+                              0xbff6e (size before relaxing)
+ .debug_str     0x000ce23a      0x1e8 ./LoRaWAN/App/lora_info.o
+                               0x9f30 (size before relaxing)
+ .debug_str     0x000ce422      0x34e ./LoRaWAN/App/test_rf.o
+                              0xbf953 (size before relaxing)
+ .debug_str     0x000ce770      0x1a1 ./LoRaWAN/Target/radio_board_if.o
+                              0xba7db (size before relaxing)
+ .debug_str     0x000ce911     0x44fa ./Middlewares/LoRaWAN/LmHandler.o
+                              0xc4135 (size before relaxing)
+ .debug_str     0x000d2e0b      0x254 ./Middlewares/LoRaWAN/LmhpCompliance.o
+                              0xc1810 (size before relaxing)
+ .debug_str     0x000d305f       0x8b ./Middlewares/LoRaWAN/LmhpPackagesRegistration.o
+                              0xbfef6 (size before relaxing)
+ .debug_str     0x000d30ea     0x2ac6 ./Middlewares/LoRaWAN/LoRaMac.o
+                              0x11686 (size before relaxing)
+ .debug_str     0x000d5bb0       0xa2 ./Middlewares/LoRaWAN/LoRaMacAdr.o
+                               0xae90 (size before relaxing)
+ .debug_str     0x000d5c52      0x31f ./Middlewares/LoRaWAN/LoRaMacClassB.o
+                               0xd43a (size before relaxing)
+ .debug_str     0x000d5f71      0x204 ./Middlewares/LoRaWAN/LoRaMacCommands.o
+                               0xa062 (size before relaxing)
+ .debug_str     0x000d6175      0x21e ./Middlewares/LoRaWAN/LoRaMacConfirmQueue.o
+                               0xa42f (size before relaxing)
+ .debug_str     0x000d6393      0x4d1 ./Middlewares/LoRaWAN/LoRaMacCrypto.o
+                               0xb67c (size before relaxing)
+ .debug_str     0x000d6864       0x78 ./Middlewares/LoRaWAN/LoRaMacParser.o
+                               0x8f31 (size before relaxing)
+ .debug_str     0x000d68dc       0xca ./Middlewares/LoRaWAN/LoRaMacSerializer.o
+                               0x8fea (size before relaxing)
+ .debug_str     0x000d69a6       0x84 ./Middlewares/LoRaWAN/NvmDataMgmt.o
+                               0x9ea7 (size before relaxing)
+ .debug_str     0x000d6a2a     0x246e ./Middlewares/LoRaWAN/Region.o
+                               0xdccb (size before relaxing)
+ .debug_str     0x000d8e98      0xaad ./Middlewares/LoRaWAN/RegionCommon.o
+                               0xd38c (size before relaxing)
+ .debug_str     0x000d9945      0x1a2 ./Middlewares/LoRaWAN/RegionEU868.o
+                               0xd7ef (size before relaxing)
+ .debug_str     0x000d9ae7      0x2b0 ./Middlewares/LoRaWAN/cmac.o
+                               0x84b5 (size before relaxing)
+ .debug_str     0x000d9d97     0x1f67 ./Middlewares/LoRaWAN/lorawan_aes.o
+                               0x9156 (size before relaxing)
+ .debug_str     0x000dbcfe      0x5ce ./Middlewares/LoRaWAN/soft-se.o
+                               0xcc05 (size before relaxing)
+ .debug_str     0x000dc2cc       0xe3 ./Middlewares/LoRaWAN/utilities.o
+                               0x8320 (size before relaxing)
+ .debug_str     0x000dc3af     0x1eae ./Middlewares/SubGHz_Phy/radio.o
+                              0xc24f6 (size before relaxing)
+ .debug_str     0x000de25d      0x6f5 ./Middlewares/SubGHz_Phy/radio_driver.o
+                              0xc0c7d (size before relaxing)
+ .debug_str     0x000de952      0x1d8 ./Middlewares/SubGHz_Phy/radio_fw.o
+                              0xc0811 (size before relaxing)
+ .debug_str     0x000deb2a      0x373 ./Utilities/stm32_adv_trace.o
+                               0x8daa (size before relaxing)
+ .debug_str     0x000dee9d      0x24c ./Utilities/stm32_lpm.o
+                               0x84a8 (size before relaxing)
+ .debug_str     0x000df0e9       0x72 ./Utilities/stm32_mem.o
+                               0x81aa (size before relaxing)
+ .debug_str     0x000df15b      0x376 ./Utilities/stm32_seq.o
+                               0x8787 (size before relaxing)
+ .debug_str     0x000df4d1      0x450 ./Utilities/stm32_systime.o
+                               0x8b9b (size before relaxing)
+ .debug_str     0x000df921      0x25e ./Utilities/stm32_timer.o
+                               0x86da (size before relaxing)
+ .debug_str     0x000dfb7f     0x125f ./Utilities/stm32_tiny_sscanf.o
+                               0x8c6b (size before relaxing)
+ .debug_str     0x000e0dde      0x1cf ./Utilities/stm32_tiny_vsnprintf.o
+                               0x69d8 (size before relaxing)
 
 .comment        0x00000000       0x43
  .comment       0x00000000       0x43 ./Core/Src/adc.o
@@ -17242,6 +17242,6 @@ LOAD C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_frame   0x0000e0d8       0x34 C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m/nofp\libgcc.a(_udivmoddi4.o)
 
 .debug_line_str
-                0x00000000       0x73
+                0x00000000       0x70
  .debug_line_str
-                0x00000000       0x73 ./Core/Startup/startup_stm32wl55ccux.o
+                0x00000000       0x70 ./Core/Startup/startup_stm32wl55ccux.o

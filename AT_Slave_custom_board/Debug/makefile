@@ -66,8 +66,8 @@ all: main-build
 main-build: AT_Slave_custom_board.elf secondary-outputs
 
 # Tool invocations
-AT_Slave_custom_board.elf AT_Slave_custom_board.map: $(OBJS) $(USER_OBJS) C:\Users\LabMeas\STM32CubeIDE\workspace_1.16.1\AT_Slave_custom_board\STM32WL55CCUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "AT_Slave_custom_board.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\LabMeas\STM32CubeIDE\workspace_1.16.1\AT_Slave_custom_board\STM32WL55CCUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AT_Slave_custom_board.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+AT_Slave_custom_board.elf AT_Slave_custom_board.map: $(OBJS) $(USER_OBJS) C:\Users\LabMeas\git\STM32WL55CCU6_projects\AT_Slave_custom_board\STM32WL55CCUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "AT_Slave_custom_board.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\LabMeas\git\STM32WL55CCU6_projects\AT_Slave_custom_board\STM32WL55CCUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AT_Slave_custom_board.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
